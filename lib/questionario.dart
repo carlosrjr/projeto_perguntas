@@ -23,6 +23,8 @@ class Questionario extends StatelessWidget {
         ? perguntas[perguntaSelecionada]['respostas']
         : null;
 
+    respostas = respostas.toList()..shuffle();
+
     return Column(
       children: <Widget>[
         Questao(perguntas[perguntaSelecionada]['texto']),
